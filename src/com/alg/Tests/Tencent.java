@@ -1,9 +1,7 @@
 package com.alg.Tests;
 
 import com.alg.model.TreeNode;
-import org.omg.CORBA.BAD_CONTEXT;
 
-import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
