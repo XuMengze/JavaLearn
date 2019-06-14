@@ -2,7 +2,7 @@ package com.alg.String;
 
 public class JudgeDouble {
     public static void main(String[] args) {
-        System.out.println(10==10L);
+        System.out.println();
     }
 
     public static boolean judge(String s) {
