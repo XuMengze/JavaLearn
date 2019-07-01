@@ -1,4 +1,4 @@
-package com.alg;
+package com.alg.Tests;
 
 import java.util.ArrayList;
 import java.util.List;

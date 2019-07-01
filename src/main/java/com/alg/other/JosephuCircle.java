@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JosephuCircle {
+    public static void main(String[] args) {
+        josephuCircle(10000, 2);
+    }
 
     public static void josephuCircle(int totalNum, int countNum) {
         // 初始化人数
