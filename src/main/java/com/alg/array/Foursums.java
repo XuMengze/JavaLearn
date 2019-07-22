@@ -14,7 +14,7 @@ class Foursums {
         System.out.println(res);
     }
 
-    public List<List<Integer>> test(int[] nums, int target) {
+    List<List<Integer>> test(int[] nums, int target) {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {

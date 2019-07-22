@@ -33,6 +33,7 @@ public class HashSetTest {
         set2.add(s1);
         set2.add(s2);
         set2.add(s3);
+        System.out.println();
 
         for (Student s : set2) {
             System.out.println(s.toString());

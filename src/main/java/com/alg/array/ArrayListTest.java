@@ -8,5 +8,6 @@ public class ArrayListTest {
         List<Integer> list1 = new ArrayList<>();
         ArrayList<String> list2 = new ArrayList<>();
         System.out.print(list1.getClass() == list2.getClass());
+        System.out.println(list2.getClass());
     }
 }

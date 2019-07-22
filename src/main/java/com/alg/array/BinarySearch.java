@@ -2,8 +2,8 @@ package com.alg.array;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] A = {3, 32, 321, 911};
-        System.out.println(search(A, 911));
+        int[] A = {0, 0, 1, 1, 1, 1, 2, 2, 2};
+        System.out.println(bsearchlast(A, 1));
     }
 
     static int search(int[] arr, int target) {
@@ -38,5 +38,33 @@ public class BinarySearch {
             }
         }
         return -1;
+    }
+
+    static int bsearchfirst(int[] arr, int target) {
+        int start = 0, end = arr.length, mid;
+
+        while (start < end) {
+            mid = start + (end - start) / 2;
+            if (arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                end = mid;
+            }
+        }
+        return arr[start] == target ? start : -1;
+    }
+
+    static int bsearchlast(int[] arr, int target) {
+        int start = 0, end = arr.length;
+        int mid;
+        while (start < end) {
+            mid = start + (int) ((end - start) / 2.0 + 0.5);
+            if (arr[mid] > target) {
+                end = mid - 1;
+            } else {
+                start = mid;
+            }
+        }
+        return arr[end] == target ? end : -1;
     }
 }
