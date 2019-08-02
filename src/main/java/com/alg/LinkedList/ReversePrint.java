@@ -11,19 +11,18 @@ public class ReversePrint {
 
 
         n0.next = n1;
-        n1.next = n2;
+
+        printList(n0);
+
+        ListNode tmp = n0.next;
+        n0.next = n2;
+        n2.next = tmp;
 
 
-        ListNode n5 = new ListNode(5);
-        ListNode n4 = new ListNode(4);
-        ListNode n3 = new ListNode(3);
+        System.out.println();
+        printList(n0);
 
-        n2.next = n3;
 
-        n3.next = n4;
-        n4.next = n5;
-
-        reversePrint(n0);
     }
 
     static void reversePrint(ListNode head) {

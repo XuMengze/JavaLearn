@@ -5,10 +5,9 @@ import java.util.Arrays;
 public class SortCollection {
     public static void main(String[] args) {
         int[] a = {9, 6, 3, 6, 8, 12, 0, 2, 3};
-        quickSort(a);
+        mergeSort(a);
         System.out.println(Arrays.toString(a));
     }
-
 
     private static int[] aux;
 
@@ -96,6 +95,35 @@ public class SortCollection {
             }
             h = h / 3;
         }
+    }
+
+    public static void headSort(int[] list) {
+        for (int i = (list.length) / 2 - 1; i >= 0; i--) {
+            headAdjust(list, i, list.length);
+        }
+        for (int i = list.length - 1; i >= 1; i--) {
+            exch(list, 0, i);
+            headAdjust(list, 0, i);
+        }
+    }
+
+    private static void headAdjust(int[] list, int i, int len) {
+        int k = i, temp = list[i], index = 2 * k + 1;
+        while (index < len) {
+            if (index + 1 < len) {
+                if (list[index] < list[index + 1]) {
+                    index = index + 1;
+                }
+            }
+            if (list[index] > temp) {
+                list[k] = list[index];
+                k = index;
+                index = 2 * k + 1;
+            } else {
+                break;
+            }
+        }
+        list[k] = temp;
     }
 
 }
