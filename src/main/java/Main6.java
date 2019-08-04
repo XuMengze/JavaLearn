@@ -9,6 +9,11 @@ public class Main6 {
         int p = scanner.nextInt();
         int q = scanner.nextInt();
         boolean trueFraction = true;
+        if (p == q) {
+            System.out.println(1 + " " + 1);
+            return;
+        }
+
         if (p > q) {
             trueFraction = false;
             p = p ^ q;
@@ -37,7 +42,7 @@ public class Main6 {
                 if (trueFraction == true) {
                     System.out.println(index + " " + (rows2.indexOf(target) + 1));
                 } else {
-                    System.out.println(index + " " + Math.round(rows2.indexOf(target) + 1 + Math.pow(2, index - 2)));
+                    System.out.println(index + " " + Math.round(Math.pow(2, index - 1) - rows2.indexOf(target)));
                 }
                 break;
             } else {
