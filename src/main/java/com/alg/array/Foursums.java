@@ -6,7 +6,7 @@ import java.util.List;
 
 class Foursums {
     public static void main(String[] args) {
-        int[] nums = {1, 0, -1, 0, -2, 2};
+        int[] nums = {0, 0, 0, 0, 0, 0};
         int target = 0;
         Foursums so = new Foursums();
         List<List<Integer>> res = so.test(nums, target);
@@ -39,7 +39,7 @@ class Foursums {
                         while (m < n && nums[m] == nums[m + 1]) {
                             m++;
                         }
-                        while (m < n && nums[n] == nums[m - 1]) {
+                        while (m < n && nums[n] == nums[n - 1]) {
                             n--;
                         }
                         m++;
