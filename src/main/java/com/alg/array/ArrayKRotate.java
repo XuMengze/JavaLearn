@@ -1,9 +1,9 @@
-package com.alg;
+package com.alg.array;
 
 
 import java.util.Arrays;
 
-public class Solution2 {
+public class ArrayKRotate {
     public static void main(String[] args) {
         int[] ori = {
                 1, 2, 3, 4, 5

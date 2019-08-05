@@ -1,55 +1,72 @@
-package com.alg;
+package com.alg.graph;
 
 import java.util.*;
 
-public class Main9 {
+public class ShortestPath {
     public static void main(String args[]) {
+//        Input Sample:
+//        地点个数 边个数 操作个数
+//        接下来是「边个数」行，每一行是 开始位置 结束位置 边长
+//        接下来是「操作个数」行，每一行是要去的位置
+//        EX1：
+//        2 1 1
+//        0 1 10
+//        1
+
+//        EX2：
+//        4 5 3
+//        0 1 15
+//        1 2 15
+//        2 3 10
+//        1 3 30
+//        0 3 50
+//        2
+//        1
+//        3
+
         Scanner sc = new Scanner(System.in);
-        List<Integer> result = new ArrayList<>();
-        while (sc.hasNextLine()) {
-            int stubCount = sc.nextInt();
-            int edge = sc.nextInt();
-            int move = sc.nextInt();
+        int stubCount = sc.nextInt();
+        int edge = sc.nextInt();
+        int move = sc.nextInt();
 
-            int[][] weight = new int[stubCount][stubCount];
-            for (int[] arr : weight) {
-                Arrays.fill(arr, -1);
-            }
-
-            for (int i = 0; i < stubCount; i++) {
-                weight[i][i] = 0;
-            }
-
-            for (int i = 0; i < edge; i++) {
-                int s = sc.nextInt();
-                int e = sc.nextInt();
-                int v = sc.nextInt();
-                weight[s][e] = v;
-                weight[e][s] = v;
-            }
-
-            String[] str = new String[stubCount];
-            Arrays.fill(str, "hhh");
-
-            Dijkstra dijkstra = new Dijkstra(stubCount);
-            //依次让各点当源点，并调用dijkstra函数
-            int[][] res = new int[stubCount][stubCount];
-            for (int i = 0; i < stubCount; i++) {
-                dijkstra.dijkstra(weight, str, i, res[i]);
-            }
-
-            int step = sc.nextInt();
-            int s = res[0][step];
-            for (int i = 1; i < move; i++) {
-                int step2 = sc.nextInt();
-                s += res[step][step2];
-                step = step2;
-            }
-            result.add(s);
+        int[][] weight = new int[stubCount][stubCount];
+        for (int[] arr : weight) {
+            Arrays.fill(arr, -1);
         }
-        for (Integer i : result) {
-            System.out.println(i);
+
+        for (int i = 0; i < stubCount; i++) {
+            weight[i][i] = 0;
         }
+
+        for (int i = 0; i < edge; i++) {
+            int s = sc.nextInt();
+            int e = sc.nextInt();
+            int v = sc.nextInt();
+            weight[s][e] = v;
+            weight[e][s] = v;
+        }
+
+        String[] str = new String[stubCount];
+//        Arrays.fill(str, "hhh");
+
+        for (int i = 0; i < stubCount; i++) {
+            str[i] = "V" + i;
+        }
+        Dijkstra dijkstra = new Dijkstra(stubCount);
+        //依次让各点当源点，并调用dijkstra函数
+        int[][] res = new int[stubCount][stubCount];
+        for (int i = 0; i < stubCount; i++) {
+            dijkstra.dijkstra(weight, str, i, res[i]);
+        }
+
+        int step = sc.nextInt();
+        int s = res[0][step];
+        for (int i = 1; i < move; i++) {
+            int step2 = sc.nextInt();
+            s += res[step][step2];
+            step = step2;
+        }
+        System.out.println(s);
     }
 }
 
@@ -84,7 +101,6 @@ class Dijkstra {
         for (int i = 0; i < str.length; i++)
             path.put(i, "");
 
-        //初始化路径长度数组distance
         for (int i = 0; i < str.length; i++) {
             path.put(i, path.get(i) + "" + str[v]);
             if (i == v)
@@ -97,14 +113,12 @@ class Dijkstra {
         }
         visited.add(v);
         while (visited.size() < str.length) {
-            int k = getIndex(visited, distance);//获取未访问点中距离源点最近的点
+            int k = getIndex(visited, distance);
             visited.add(k);
             if (k != -1) {
 
                 for (int j = 0; j < str.length; j++) {
-                    if (weight[k][j] != -1)//判断k点能够直接到达的点
-                    {
-                        //通过遍历各点，比较是否有比当前更短的路径，有的话，则更新distance，并更新path。
+                    if (weight[k][j] != -1) {
                         if (distance[j] > distance[k] + weight[k][j]) {
                             distance[j] = distance[k] + weight[k][j];
                             path.put(j, path.get(k) + "-->" + str[j]);

@@ -1,9 +1,11 @@
+package com.alg.Tree;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Main6 {
+public class SBTree {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int p = scanner.nextInt();

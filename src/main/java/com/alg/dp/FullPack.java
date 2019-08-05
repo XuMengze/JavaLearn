@@ -1,11 +1,11 @@
-package com.alg;
+package com.alg.dp;
 
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main7 {
+public class FullPack {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         List<Integer> res = new ArrayList<>();

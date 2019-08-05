@@ -1,14 +1,16 @@
+package com.alg.array;
+
 import java.util.*;
 
 
-public class Main {
+public class Majong {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] arr = new int[13];
         for (int i = 0; i < 13; i++) {
             arr[i] = sc.nextInt();
         }
-        Main game = new Main();
+        Majong game = new Majong();
         game.detectHu(arr);
     }
 

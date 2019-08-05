@@ -1,10 +1,10 @@
-package com.alg;
+package com.alg.String;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Main2 {
+public class SelfSort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int numCount = sc.nextInt();

@@ -47,7 +47,7 @@ public class Tencent {
         return dp[k];
     }
 
-//    public class Solution {
+//    public class com.alg.Tests.Xiecheng.Solution {
 //        private ArrayList<ArrayList<Integer>> listAll = new ArrayList<ArrayList<Integer>>();
 //        private ArrayList<Integer> list = new ArrayList<Integer>();
 //

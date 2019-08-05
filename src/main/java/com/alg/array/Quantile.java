@@ -1,9 +1,9 @@
-package com.alg;
+package com.alg.array;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class Quantile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int pupilNum = sc.nextInt();

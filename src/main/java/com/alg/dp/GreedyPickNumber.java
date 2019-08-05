@@ -1,7 +1,10 @@
-import java.util.*;
+package com.alg.dp;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class Main5 {
+public class GreedyPickNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numCount = scanner.nextInt();

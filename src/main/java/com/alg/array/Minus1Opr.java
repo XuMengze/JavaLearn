@@ -1,15 +1,15 @@
-package com.alg;
+package com.alg.array;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main4 {
+public class Minus1Opr {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numCOunr = sc.nextInt();
+        int numCount = sc.nextInt();
         int oprCount = sc.nextInt();
-        int[] numArr = new int[numCOunr];
-        for (int i = 0; i < numCOunr; i++) {
+        int[] numArr = new int[numCount];
+        for (int i = 0; i < numCount; i++) {
             numArr[i] = sc.nextInt();
         }
         int[] oprArr = new int[oprCount];
@@ -23,7 +23,7 @@ public class Main4 {
             if (pos == -1) {
                 System.out.println(0);
             } else {
-                System.out.println(numCOunr - pos);
+                System.out.println(numCount - pos);
             }
             inc(numArr, pos);
         }
