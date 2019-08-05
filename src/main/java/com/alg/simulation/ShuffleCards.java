@@ -1,11 +1,11 @@
-package com.alg.Tests;
+package com.alg.simulation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class Tencet100 {
+public class ShuffleCards {
     public static final int CARD_NUM = 52;
 
     public static void main(String[] args) {
