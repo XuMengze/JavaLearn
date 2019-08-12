@@ -1,3 +1,5 @@
+package com.alg.java_core;
+
 import java.util.function.BinaryOperator;
 
 public class FunctionCompose {
