@@ -1,4 +1,4 @@
-package com.alg.Tests;
+package com.alg.String;
 
 public class BigNumMultiply {
     public static void main(String[] args) {
