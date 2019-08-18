@@ -7,7 +7,7 @@ public class OnlyOneChar {
         System.out.println(onlyOneChar("aabccddeeell,,"));
     }
 
-    public static char onlyOneChar(String s) {
+    static char onlyOneChar(String s) {
         int[] res = new int[255];
 
         Arrays.fill(res, 0);
