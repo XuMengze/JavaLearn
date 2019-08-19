@@ -18,7 +18,7 @@ public class ByteDance {
         zhaoqian = zhaoqian % 16;
         res += zhaoqian / 4;
         zhaoqian = zhaoqian % 4;
-        res += zhaoqian / 1;
+        res += zhaoqian;
 
         System.out.println(res);
 

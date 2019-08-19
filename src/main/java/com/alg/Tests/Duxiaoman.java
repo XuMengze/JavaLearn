@@ -19,9 +19,9 @@ public class Duxiaoman {
             resarr[i] = getLineWeight(nodeWeight, i);
         }
 
-        String res = "";
+        StringBuilder res = new StringBuilder();
         for (int i = 0; i < resarr.length; i++) {
-            res += resarr[i] + " ";
+            res.append(resarr[i]).append(" ");
         }
 
         System.out.println(res.substring(0, res.length() - 1));

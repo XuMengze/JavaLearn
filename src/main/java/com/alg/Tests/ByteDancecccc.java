@@ -18,8 +18,8 @@ public class ByteDancecccc {
 
     }
 
-    public static void revise(StringBuffer s) {
-        List<Character> list = new ArrayList();
+    private static void revise(StringBuffer s) {
+        List<Character> list = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
             if (list.size() == 0) {
                 list.add(s.charAt(i));

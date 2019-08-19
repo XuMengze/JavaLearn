@@ -18,7 +18,7 @@ public class ByteDance2 {
         }
     }
 
-    public static String method(String s) {
+    private static String method(String s) {
         String res = solution(s);
         while (!(res.length() == s.length())) {
             s = res;
@@ -27,7 +27,7 @@ public class ByteDance2 {
         return res;
     }
 
-    public static String solution(String s) {
+    private static String solution(String s) {
 
         char[] ca = s.toCharArray();
         int len = ca.length;
