@@ -14,8 +14,8 @@ public class ClickWindow {
 //    105 105
 //    1 1
 
-    public static final int WIDTH = 3840;
-    public static final int HEIGHT = 2160;
+    private static final int WIDTH = 3840;
+    private static final int HEIGHT = 2160;
 
     public static void main(String[] args) {
         int[][] screen = new int[HEIGHT][WIDTH];
@@ -34,7 +34,7 @@ public class ClickWindow {
             int y = scanner.nextInt();
             int w = scanner.nextInt();
             int h = scanner.nextInt();
-            windows[i] = new int[]{x, y, x + w > WIDTH ? WIDTH : x + w, y + h > HEIGHT ? HEIGHT : y + h};
+            windows[i] = new int[]{x, y, Math.min(x + w, WIDTH), Math.min(y + h, HEIGHT)};
         }
         int[][] oprs = new int[oprCount][2];
         for (int i = 0; i < oprCount; i++) {
