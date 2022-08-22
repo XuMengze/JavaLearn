@@ -18,19 +18,20 @@ public class LinkedStack<T> {
         boolean end() {
             return item == null && next == null;
         }
-
-        private Node<T> top = new Node<>();
-
-        public void push(T item) {
-            top = new Node<>(item, top);
-        }
-
-        public T pop() {
-            T result = top.item;
-            if (!top.end()) {
-                top = top.next;
-            }
-            return result;
-        }
     }
+
+    private Node<T> top = new Node<>();
+
+    public void push(T item) {
+        top = new Node<>(item, top);
+    }
+
+    public T pop() {
+        T result = top.item;
+        if (!top.end()) {
+            top = top.next;
+        }
+        return result;
+    }
+
 }
