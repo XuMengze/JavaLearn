@@ -25,4 +25,7 @@ public class Sets {
     public static <T> Set<T> complete(Set<T> a, Set<T> b) {
         return difference(union(a, b), intersection(a, b));
     }
+
+    public static void main(String[] args) {
+    }
 }
