@@ -3,6 +3,7 @@ package com.alg.array;
 import java.util.*;
 
 public class CutDuplicate {
+    // Test
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int numberCount = sc.nextInt();
